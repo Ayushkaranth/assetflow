@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Command, LayoutGrid, Building2, ScrollText } from "lucide-react";
+import { Command, LayoutGrid, PieChart, PlusCircle, Settings } from "lucide-react"; // Updated Icons
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { CommandMenu } from "./CommandMenu"; 
 
@@ -33,19 +33,23 @@ export const Navbar = () => {
             </span>
           </Link>
 
-          {/* 2. Navigation Links (Desktop) */}
+          {/* 2. Navigation Links (Desktop) - UPDATED LINKS */}
           <div className="hidden md:flex items-center gap-6 text-[13px] font-medium text-[#8A8F98]">
             <Link href="/market" className="hover:text-white transition-colors flex items-center gap-2">
               <LayoutGrid className="w-3.5 h-3.5" />
               Market
             </Link>
-            <Link href="/protocol" className="hover:text-white transition-colors flex items-center gap-2">
-              <ScrollText className="w-3.5 h-3.5" />
-              Protocol
+            <Link href="/dashboard" className="hover:text-white transition-colors flex items-center gap-2">
+              <PieChart className="w-3.5 h-3.5" />
+              Dashboard
             </Link>
-            <Link href="/company" className="hover:text-white transition-colors flex items-center gap-2">
-              <Building2 className="w-3.5 h-3.5" />
-              Company
+            <Link href="/create" className="hover:text-white transition-colors flex items-center gap-2">
+              <PlusCircle className="w-3.5 h-3.5" />
+              Create
+            </Link>
+             <Link href="/admin" className="hover:text-white transition-colors flex items-center gap-2">
+              <Settings className="w-3.5 h-3.5" />
+              Admin
             </Link>
           </div>
 

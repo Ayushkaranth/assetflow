@@ -10,7 +10,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#0B0C0E] text-[#F7F8F8] relative selection:bg-blue-500/30">
       
       {/* 1. Global Texture */}
-      <div className="bg-noise" />
+      <div className="bg-noise fixed inset-0 opacity-20 pointer-events-none" />
       
       {/* 2. Navigation */}
       <Navbar />
@@ -22,6 +22,7 @@ export default function Home() {
       <LiveFeed />
       
       {/* 5. The Product (Grid) */}
+      {/* Note: This component should link to /market for the full dynamic list */}
       <Marketplace />
       
       {/* 6. The "Why" (Bento Grid) */}
@@ -31,7 +32,7 @@ export default function Home() {
       <CallToAction />
       
       {/* 8. Simple Footer */}
-      <footer className="py-12 text-center text-[#8A8F98] text-sm border-t border-white/5">
+      <footer className="py-12 text-center text-[#8A8F98] text-sm border-t border-white/5 relative z-10">
         <p>© 2025 AssetFlow Protocol. Built with Next.js & Solidity.</p>
       </footer>
     </main>
