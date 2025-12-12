@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Ayush A Karanth\\assetflow\\contracts\\AssetToken.sol": {
-      "lastModificationDate": 1765479063798,
-      "contentHash": "76eab66fb2507d0fa74d42ffc151ffdb",
+      "lastModificationDate": 1765524938574,
+      "contentHash": "25243f6498861a26d2dd28dbcefa2fa6",
       "sourceName": "contracts/AssetToken.sol",
       "solcConfig": {
         "version": "0.8.20",
@@ -268,8 +268,8 @@
       ]
     },
     "C:\\Users\\Ayush A Karanth\\assetflow\\contracts\\AssetFactory.sol": {
-      "lastModificationDate": 1765477339366,
-      "contentHash": "7bd0a74fcdd7a27ecfa74fc9c1720447",
+      "lastModificationDate": 1765524951010,
+      "contentHash": "5c912c25f0360332d6e2be85d83f9dd9",
       "sourceName": "contracts/AssetFactory.sol",
       "solcConfig": {
         "version": "0.8.20",
