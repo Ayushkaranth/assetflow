@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Instrument_Serif } from "next/font/google";
-import { Inter } from "next/font/google"; // Using standard Inter for ease
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/utils/cn"; // Ensure you created this util in the previous step
 import { Web3Provider } from "@/providers/Web3Provider";
+import { Toaster } from "sonner"; // <--- 1. Import this
 
-const serif = Instrument_Serif({ subsets: ["latin"], weight: "400", variable: "--font-serif" });
-const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
   title: "AssetFlow",
-  description: "Tangible Wealth Marketplace",
+  description: "RWA Platform",
 };
 
 export default function RootLayout({
@@ -20,16 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(serif.variable, sans.variable, "font-sans antialiased relative")}>
-        
-        {/* The Noise Overlay - Just a simple div using the CSS class */}
-        <div className="bg-noise" />
-
-        <main className="relative z-10">
-          <Web3Provider>
-            {children}
+      <body className={`${inter.variable} ${playfair.variable} font-sans bg-[#08090A] text-white`}>
+        <Web3Provider>
+          {children}
+          {/* 2. Add this line here */}
+          <Toaster position="bottom-right" theme="dark" richColors /> 
         </Web3Provider>
-        </main>
       </body>
     </html>
   );
